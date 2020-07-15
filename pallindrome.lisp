@@ -205,15 +205,10 @@
     (starts-with 'ends-with)))
 
 (defun mark (word status space)
-  (case status
-    (used (setf (cdr (assoc word
-			    space
-			    :test 'equal))
-		nil))
-    (unused (setf (cdr (assoc word
-			      space
-			      :test 'equal))
-		  t))))
+  (setf (cdr (assoc word space :test 'equal))
+	(case status
+	  (used nil)
+	  (unused t))))
 
 (defmacro refresh (stack acc)
   `(progn
