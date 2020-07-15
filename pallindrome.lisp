@@ -96,9 +96,11 @@
     (labels (( rec (list loop-k acc)
 	       (if (null list)
 		   acc
-		   (if (zerop (mod loop-k n))
-		       (rec (cdr list) (+ 1 loop-k) (cons (car list) acc))
-		       (rec (cdr list) (+ 1 loop-k) acc)))))
+		   (rec (cdr list)
+			(+ 1 loop-k)
+			(if (zerop (mod loop-k n))
+			    (cons (car list) acc)
+			    acc)))))
       (rec list 0 nil)))
 
   (append
