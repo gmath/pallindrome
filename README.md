@@ -1,10 +1,10 @@
 # pallindrome
 
-# This is my humble attempt at finding long pallindromes composed of English words found in a common dictionary. Without allowing duplicates and considering the edges cases of words like "aaa" and other unfamiliar English words.
+ This is my humble attempt at finding long pallindromes composed of English words found in a common dictionary. Without allowing duplicates and considering the edges cases of words like "aaa" and other unfamiliar English words.
 
-# The basic approach is like Peter Norvig's that searches for the remainder of the previous pallindromic match. For example "amen .... nema" -> "amen ... cinema" --> "amen ic ... cinema" --> "amen ice ... cinema"
+ The basic approach is like Peter Norvig's that searches for the remainder of the previous pallindromic match. For example "amen .... nema" -> "amen ... cinema" --> "amen ic ... cinema" --> "amen ice ... cinema"
 
-# With a starting word of "amen" this humble approach will find the following 1376 word pallindrome.
+ With a starting word of "amen" this humble approach will find the following 1376 word pallindrome.
 
 ("amen" "ice" "tabasco" "dab" "lea" "gab" "lab" "arak" "cabal" "label" "echo"
  "dad" "negate" "baa" "had" "dado" "orbit" "nab" "rabat" "road" "image" "bad"
